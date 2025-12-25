@@ -1,0 +1,2 @@
+#!/bin/bash
+docker run --gpus all --rm -v $(pwd):/app geogaussian:latest python3 train.py -s data/RealData --sparse_num 1 --densify_grad_threshold 0.0002 --densification_interval 500 --opacity_reset_interval 30000 --max_points 5000000
